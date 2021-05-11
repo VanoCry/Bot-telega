@@ -80,8 +80,8 @@ def lalala(message):
         markup.add(itemback)
         bot.send_message(message.chat.id, "Ну есть у меня бесплатное) а что?)", reply_markup=markup)
     if message.text == '❓Как это\nработает?❓':
-        akks = types.KeyboardButton('🤔Откуда столько\nаккаунтов🤔')
-        gemz = types.KeyboardButton('🧐Как забрать\nкупленные гемы🧐')
+        akks = types.KeyboardButton('🤔Откуда столько\nаккаунтов?🤔')
+        gemz = types.KeyboardButton('🧐Как забрать\nкупленные гемы?🧐')
         markup.add(akks, gemz)
         markup.add(itemback)
         quest_png = open('quest.tgs', 'rb')
@@ -155,6 +155,16 @@ def lalala(message):
         bot.send_message(message.chat.id, "Скопировал? СКРИНЬ все сообщения и БЕГОМ в мою личку за аккаунтом\n@ioneforever07👈", reply_markup=markup)
         pod_png = open('Duck_pod.tgs', 'rb')
         bot.send_sticker(message.chat.id, pod_png)
+    if message.text == '🧐Как забрать\nкупленные гемы?🧐':
+        markup.add(itemback)
+        bot.send_message(message.chat.id, "♦После оплаты с указанным кодом в комментариях платежа♦\nТебе приходит код который нужно ввести в поле 'КОД АВТОРА' и ты получишь свой товар😉", reply_markup=markup )
+        ok_png = open('ok.webp', 'rb')
+        bot.send_sticker(message.chat.id, ok_png, reply_markup=markup)
+    if message.text == '🤔Откуда столько\nаккаунтов?🤔':
+        markup.add(itemback)
+        bot.send_message(message.chat.id, "Бот подключен к бирже аккаунтов, где скупает 'мёртвые' аккаунты(аккаунты на которые давно никто не заходил) Вскоре админ прокачивает эти аккаунты и часть уходит на продажу, а часть меняется на 💎'гемные'💎 коды, которые потом продаёт этот бот☺", reply_markup=markup )
+        duck_png = open('duck.tgs', 'rb')
+        bot.send_sticker(message.chat.id, duck_png, reply_markup=markup)
 
 
 bot.polling(none_stop=True)
