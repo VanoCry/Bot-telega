@@ -108,6 +108,7 @@ def lalala(message):
     if message.text == 'Оплатить':
         markup.add(itemback)
         bot.send_message(message.chat.id, "Оплатить покупку можно по Qiwi:\n*номер*\n(введите код сверху👆👆👆 в поле комментария платежа)\n (Другие способы оплаты доступны у менеджера @ioneforever07)", reply_markup=markup )
+        bot.send_message(message.chat.id, "😄Если вдруг захочешь воспользоваться нашими услугами, ☺️удели время чтобы написать отзыв ему 👉@ioneforever07, ты поможешь развиться нашему проекту😉Спасибо🙂")
     if message.text == '😄Гемы хочу😄':
         markup.add(itemback)
         bot.send_message(message.chat.id, "Для того чтобы БЕСПЛАТНО ПОЛУЧИТЬ 80 ГЕМОВ придётся ПОСТАРАТЬСЯ!😉\nСКОПИРУЙ ЭТО СООБЩЕНИЕ И ОТПРАВЬ 30 ДРУЗЬЯМ😜\n(только телеграмм)", reply_markup=markup)
