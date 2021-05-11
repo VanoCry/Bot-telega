@@ -36,6 +36,7 @@ def welcome(message):
 def lalala(message):
     #ПРИКРУТИЛ КНОПКУ НАЗАД СЮДА
     itemback = types.KeyboardButton('Назад')
+    itembuy = types.KeyboardButton('Оплатить')
     markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
 #прикрутил действие к кнопке Отзывов
     if message.text == '⭐️Отзывы⭐️':
@@ -82,6 +83,8 @@ def lalala(message):
         bot.send_sticker(message.chat.id, quest_png, reply_markup=markup)
     if message.text == '💎Гемы💎':
         i30 = types.KeyboardButton('💎30 Гемов💎')
+        i30 = types.KeyboardButton('💎30 Гемов💎')
+        i30 = types.KeyboardButton('💎30 Гемов💎')
         i80 = types.KeyboardButton('💎80 Гемов💎')
         i170 = types.KeyboardButton('💎170 Гемов💎')
         i360 = types.KeyboardButton('💎360 Гемов💎')
@@ -97,12 +100,14 @@ def lalala(message):
         gems_png = open('gems.tgs', 'rb')
         bot.send_sticker(message.chat.id, gems_png)
         bot.send_message(message.chat.id, "список", reply_markup=markup)
+    if message.text == 'Оплатить':
+        markup.add(itemback)
+        bot.send_message(message.chat.id, "Оплатить покупку можно по Qiwi:\n*номер*\n(введите код сверху👆👆👆 в поле комментария платежа)", reply_markup=markup )
 
-@bot.message_handler(content_types =['text'])
-def gems(message):
-    #ПРИКРУТИЛ КНОПКУ НАЗАД СЮДА
-    itemback = types.KeyboardButton('Назад')
-    markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+
+
+
+
 
 
 
