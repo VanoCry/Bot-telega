@@ -3,11 +3,11 @@ from telebot import types
 import random
 import password
 
-gener = password.gener(1)
+
 
 bot = telebot.TeleBot('1782656960:AAHBZ7dYYSRz2fmPoYhHmCQI4K_mCpw7vEg')
 #начальный экран
-item1 = types.KeyboardButton('💎Гемы💎')
+item1 = types.KeyboardButton('💎Гемы💎')#
 item2 = types.KeyboardButton('🔥Бесплатно🔥')#
 item3 = types.KeyboardButton('🎒Кейсы🎒')
 item4 = types.KeyboardButton('⭐️Отзывы⭐️')###
@@ -31,7 +31,7 @@ def welcome(message):
     bot.send_sticker(message.chat.id, hello_png)
 #экран закончился
 
-#основа перемещений
+#ОСНОВА ПЕРЕМЕЩЕНИЙ
 @bot.message_handler(content_types =['text'])
 def lalala(message):
     #ПРИКРУТИЛ КНОПКУ НАЗАД СЮДА
@@ -57,7 +57,6 @@ def lalala(message):
         markup.add(item5, item6)
         markup.add(item4)
         bot.send_message(message.chat.id, "Выбери что тебе по душе!", reply_markup=markup)
-
     if message.text == '🚫не пришёл\nтовар🚫':
         markup.add(itemback)
         #сообщения
@@ -81,11 +80,34 @@ def lalala(message):
         markup.add(itemback)
         quest_png = open('quest.tgs', 'rb')
         bot.send_sticker(message.chat.id, quest_png, reply_markup=markup)
+    if message.text == '💎Гемы💎':
+        i30 = types.KeyboardButton('💎30 Гемов💎')
+        i80 = types.KeyboardButton('💎80 Гемов💎')
+        i170 = types.KeyboardButton('💎170 Гемов💎')
+        i360 = types.KeyboardButton('💎360 Гемов💎')
+        i950 = types.KeyboardButton('💎950 Гемов💎')
+        i2000 = types.KeyboardButton('🎒2000 Гемов🎒')
+        ifree80 = types.KeyboardButton('🤔80 Гемов бесплатно🤔')
+        markup.add(i30,i80)
+        markup.add(i170,i360)
+        markup.add(i950,i2000)
+        markup.add(ifree80)
+        markup.add(itemback)
+        bot.send_message(message.chat.id, "Сейчас проходят небольшие 🤩скидки(-15%)🤩 И вот наш лист 💎донатов💎 которые вы можете у нас купить🧐:")
+        gems_png = open('gems.tgs', 'rb')
+        bot.send_sticker(message.chat.id, gems_png)
+        bot.send_message(message.chat.id, "список", reply_markup=markup)
 
-    if message.text == '567':
-        bot.send_message(message.chat.id, gener, reply_markup=markup)
+@bot.message_handler(content_types =['text'])
+def gems(message):
+    #ПРИКРУТИЛ КНОПКУ НАЗАД СЮДА
+    itemback = types.KeyboardButton('Назад')
+    markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
 
-    
+
+
+
+
 
 
 
