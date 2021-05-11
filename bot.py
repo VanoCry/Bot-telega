@@ -103,8 +103,8 @@ def lalala(message):
         markup.add(itemback)
         bot.send_message(message.chat.id, "Сейчас проходят небольшие 🤩скидки(-15%)🤩 И вот наш лист 💎донатов💎 которые вы можете у нас купить🧐:", reply_markup=markup)
         gems_png = open('gems.tgs', 'rb')
-        bot.send_sticker(message.chat.id, gems_png)
         bot.send_message(message.chat.id, "список")
+        bot.send_sticker(message.chat.id, gems_png)
     if message.text == 'Оплатить':
         markup.add(itemback)
         bot.send_message(message.chat.id, "Оплатить покупку можно по Qiwi:\n*номер*\n(введите код сверху👆👆👆 в поле комментария платежа)\n (Другие способы оплаты доступны у менеджера @ioneforever07)", reply_markup=markup )
