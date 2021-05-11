@@ -8,7 +8,7 @@ import password
 bot = telebot.TeleBot('1782656960:AAHBZ7dYYSRz2fmPoYhHmCQI4K_mCpw7vEg')
 #начальный экран
 item1 = types.KeyboardButton('💎Гемы💎')#
-item2 = types.KeyboardButton('🔥Бесплатно🔥')#
+item2 = types.KeyboardButton('🔥Бесплатно🔥')##
 item3 = types.KeyboardButton('🎒Кейсы🎒')
 item4 = types.KeyboardButton('⭐️Отзывы⭐️')###
 item5 = types.KeyboardButton('❓Как это\nработает?❓')#
@@ -103,17 +103,25 @@ def lalala(message):
     if message.text == 'Оплатить':
         markup.add(itemback)
         bot.send_message(message.chat.id, "Оплатить покупку можно по Qiwi:\n*номер*\n(введите код сверху👆👆👆 в поле комментария платежа)", reply_markup=markup )
+    if message.text == '😄Гемы хочу😄':
+        markup.add(itemback)
+        bot.send_message(message.chat.id, "Для того чтобы БЕСПЛАТНО ПОЛУЧИТЬ 80 ГЕМОВ придётся ПОСТАРАТЬСЯ!😉\nСКОПИРУЙ ЭТО СООБЩЕНИЕ И ОТПРАВЬ 30 ДРУЗЬЯМ😜\n(только телеграмм)", reply_markup=markup)
+        bot.send_message(message.chat.id, "🎒🎒🎒🎒🎒🎒🎒🎒\n🧐Я КУПИЛ ГЕМЫ ДЕШЕВЛЕ В 3 РАЗА ЧЕРЕЗ ЭТОГО БОТА🧐👇👇👇\n@gemspatrick_bot\n@gemspatrick_bot\n@gemspatrick_bot\n🤫И 80 ГЕМОВ ПОЛУЧИЛ В ПОДАРОК🤫\n🎒🎒🎒🎒🎒🎒🎒🎒", reply_markup=markup)
+        bot.send_message(message.chat.id, "Скопировал? СКРИНЬ все сообщения и БЕГОМ в мою личку за гемами\n@ioneforever07👈", reply_markup=markup)
+    if message.text == '🤔80 Гемов бесплатно🤔':
+        markup.add(itemback)
+        bot.send_message(message.chat.id, "Для того чтобы БЕСПЛАТНО ПОЛУЧИТЬ 80 ГЕМОВ придётся ПОСТАРАТЬСЯ!😉\nСКОПИРУЙ ЭТО СООБЩЕНИЕ И ОТПРАВЬ 30 ДРУЗЬЯМ😜\n(только телеграмм)", reply_markup=markup)
+        bot.send_message(message.chat.id, "🎒🎒🎒🎒🎒🎒🎒🎒\n🧐Я КУПИЛ ГЕМЫ ДЕШЕВЛЕ В 3 РАЗА ЧЕРЕЗ ЭТОГО БОТА🧐👇👇👇\n@gemspatrick_bot\n@gemspatrick_bot\n@gemspatrick_bot\n🤫И 80 ГЕМОВ ПОЛУЧИЛ В ПОДАРОК🤫\n🎒🎒🎒🎒🎒🎒🎒🎒", reply_markup=markup)
+        bot.send_message(message.chat.id, "Скопировал? СКРИНЬ все сообщения и БЕГОМ в мою личку за гемами\n@ioneforever07👈", reply_markup=markup)        
+    if message.text == '💎30 Гемов💎':
+        markup.add(itembuy)
+        markup.add(itemback)
+        bot.send_message(message.chat.id, "", reply_markup=markup)
 
-
-
-
-
-
-
-
-
-
-
+    if message.text == '💎30 Гемов💎':
+        markup.add(itembuy)
+        markup.add(itemback)
+        bot.send_message(message.chat.id, "список", reply_markup=markup)
 
 
 
