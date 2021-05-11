@@ -12,7 +12,7 @@ def generator(a):
 
 bot = telebot.TeleBot('1782656960:AAHBZ7dYYSRz2fmPoYhHmCQI4K_mCpw7vEg')
 #начальный экран
-item1 = types.KeyboardButton('💎Гемы💎')##
+item1 = types.KeyboardButton('💎Гемы💎')###
 item2 = types.KeyboardButton('🔥Бесплатно🔥')###
 item3 = types.KeyboardButton('🎒Кейсы🎒')
 item4 = types.KeyboardButton('⭐️Отзывы⭐️')###
@@ -107,7 +107,7 @@ def lalala(message):
         bot.send_sticker(message.chat.id, gems_png)
     if message.text == 'Оплатить':
         markup.add(itemback)
-        bot.send_message(message.chat.id, "Оплатить покупку можно по Qiwi:\n*номер*\n(введите код сверху👆👆👆 в поле комментария платежа)\n (Другие способы оплаты доступны у менеджера @ioneforever07)", reply_markup=markup )
+        bot.send_message(message.chat.id, "Оплатить покупку можно по Qiwi:\n*номер*\n(введите код сверху👆👆👆 в поле комментария платежа)", reply_markup=markup )
         bot.send_message(message.chat.id, "😄Если вдруг захочешь воспользоваться нашими услугами, ☺️удели время чтобы написать отзыв ему 👉@ioneforever07, ты поможешь развиться нашему проекту😉Спасибо🙂")
     if message.text == '😄Гемы хочу😄':
         markup.add(itemback)
