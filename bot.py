@@ -12,11 +12,11 @@ def generator(a):
 
 bot = telebot.TeleBot('1782656960:AAHBZ7dYYSRz2fmPoYhHmCQI4K_mCpw7vEg')
 #начальный экран
-item1 = types.KeyboardButton('💎Гемы💎')###
+item1 = types.KeyboardButton('💎Гемы💎')#
 item2 = types.KeyboardButton('🔥Бесплатно🔥')###
 item3 = types.KeyboardButton('🎒Кейсы🎒')
 item4 = types.KeyboardButton('⭐️Отзывы⭐️')###
-item5 = types.KeyboardButton('❓Как это\nработает?❓')#
+item5 = types.KeyboardButton('❓Как это\nработает?❓')###
 item6 = types.KeyboardButton('🚫не пришёл\nтовар🚫')###
 item7 = types.KeyboardButton('🤩аккаунты🤩')
 @bot.message_handler(commands=['start'])
@@ -124,22 +124,32 @@ def lalala(message):
     if message.text == '💎30 Гемов💎':
         markup.add(itembuy)
         markup.add(itemback)
+        gem30 = open('static\gem30.jpg', 'rb')
+        bot.send_photo(message.chat.id, gem30)
         bot.send_message(message.chat.id, "Ваша покупка:\n----------------------------------------\n💎30 Гемов💎 за 38₽\n----------------------------------------\nВведите при оплате в поле комментария: " + generator(15), reply_markup=markup)
     if message.text == '💎80 Гемов💎':
         markup.add(itembuy)
         markup.add(itemback)
+        gem80 = open('static\gem80.jpg', 'rb')
+        bot.send_photo(message.chat.id, gem80)
         bot.send_message(message.chat.id, "Ваша покупка:\n----------------------------------------\n💎80 Гемов💎 за 76₽\n----------------------------------------\nВведите при оплате в поле комментария: " + generator(16), reply_markup=markup)
     if message.text == '💎170 Гемов💎':
         markup.add(itembuy)
         markup.add(itemback)
+        gem170 = open('static\gem170.jpg', 'rb')
+        bot.send_photo(message.chat.id, gem170)
         bot.send_message(message.chat.id, "Ваша покупка:\n----------------------------------------\n💎170 Гемов💎 за 102₽\n----------------------------------------\nВведите при оплате в поле комментария: " + generator(17), reply_markup=markup)
     if message.text == '💎360 Гемов💎':
         markup.add(itembuy)
         markup.add(itemback)
+        gem360 = open('static\gem360.jpg', 'rb')
+        bot.send_photo(message.chat.id, gem360)
         bot.send_message(message.chat.id, "Ваша покупка:\n----------------------------------------\n💎360 Гемов💎 за 169₽\n----------------------------------------\nВведите при оплате в поле комментария: " + generator(14), reply_markup=markup)
     if message.text == '💎950 Гемов💎':
         markup.add(itembuy)
         markup.add(itemback)
+        gem950 = open('static\gem950.jpg', 'rb')
+        bot.send_photo(message.chat.id, gem950)
         bot.send_message(message.chat.id,"Ваша покупка:\n----------------------------------------\n💎950 Гемов💎 за 483₽\n----------------------------------------\nВведите при оплате в поле комментария: "+ generator(18), reply_markup=markup)
     if message.text == '🙃Аккаунт хочу🙃':
         bot.send_message(message.chat.id, "🎆Характеристики аккаунта🎆:\n🏆Кубков: 22111\n💪Бойцов: 43/43\n⚡Леги: Спайк, Ворон, Леон, Сэнди\n⭐Звездные силы: у всех\n💎Гемы: 25\n✔Доступна смена ника\n✔Привязан к Supercell ID\n✔Доступна перепривязка аккаунта")
