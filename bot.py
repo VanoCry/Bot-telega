@@ -12,7 +12,7 @@ def generator(a):
 
 bot = telebot.TeleBot('1782656960:AAHBZ7dYYSRz2fmPoYhHmCQI4K_mCpw7vEg')
 #начальный экран
-item1 = types.KeyboardButton('💎Гемы💎')#
+item1 = types.KeyboardButton('💎Гемы💎')###(не прописана оплата по киви и кейс для 2000)
 item2 = types.KeyboardButton('🔥Бесплатно🔥')###
 item3 = types.KeyboardButton('🎒Кейсы🎒')
 item4 = types.KeyboardButton('⭐️Отзывы⭐️')###
@@ -103,7 +103,7 @@ def lalala(message):
         markup.add(itemback)
         bot.send_message(message.chat.id, "Сейчас проходят небольшие 🤩скидки(-15%)🤩 И вот наш лист 💎донатов💎 которые вы можете у нас купить🧐:", reply_markup=markup)
         gems_png = open('gems.tgs', 'rb')
-        bot.send_message(message.chat.id, "список")
+        bot.send_message(message.chat.id, "💎30 гемов💎 (45₽) - 15% = 38₽ (Вместо 179₽)\n💎80 гемов💎 (90₽) - 15% = 76₽ (Вместо 449₽)\n💎170 гемов💎 (120₽) - 15% = 102₽ (Вместо 899₽)\n💎360 гемов💎 (199₽) - 15% = 169₽ (Вместо 1790₽)\n💎950 гемов💎 (569₽) - 15% = 483₽ (Вместо 4690₽)\n🎒2000 гемов🎒 возможно получить только из кейса ****")
         bot.send_sticker(message.chat.id, gems_png)
     if message.text == 'Оплатить':
         markup.add(itemback)
