@@ -12,9 +12,9 @@ def generator(a):
 
 bot = telebot.TeleBot('1782656960:AAHBZ7dYYSRz2fmPoYhHmCQI4K_mCpw7vEg')
 #начальный экран
-item1 = types.KeyboardButton('💎Гемы💎')###(не прописана оплата по киви и кейс для 2000)
+item1 = types.KeyboardButton('💎Гемы💎')###( кейс для 2000)
 item2 = types.KeyboardButton('🔥Бесплатно🔥')###
-item3 = types.KeyboardButton('🎒Кейсы🎒')
+item3 = types.KeyboardButton('🎒Кейсы🎒')##
 item4 = types.KeyboardButton('⭐️Отзывы⭐️')###
 item5 = types.KeyboardButton('❓Как это\nработает?❓')###
 item6 = types.KeyboardButton('🚫не пришёл\nтовар🚫')###
@@ -107,7 +107,7 @@ def lalala(message):
         bot.send_sticker(message.chat.id, gems_png)
     if message.text == 'Оплатить':
         markup.add(itemback)
-        bot.send_message(message.chat.id, "Оплатить покупку можно по Qiwi:\n89628099420n(введите код сверху👆👆👆 в поле комментария платежа)", reply_markup=markup )
+        bot.send_message(message.chat.id, "Оплатить покупку можно по Qiwi:\n89628099420\n(введите код сверху👆👆👆 в поле комментария платежа)", reply_markup=markup )
         bot.send_message(message.chat.id, "😄Если вдруг захочешь воспользоваться нашими услугами, ☺️удели время чтобы написать отзыв ему 👉@ioneforever07, ты поможешь развиться нашему проекту😉Спасибо🙂")
     if message.text == '😄Гемы хочу😄':
         markup.add(itemback)
@@ -187,11 +187,50 @@ def lalala(message):
         markup.add(itemback)
         bot.send_message(message.chat.id, "👇Наш выбор кейсов👇", reply_markup=markup)
     if message.text == 'Кейс 🎇"ШИРП"🎇':
+        shirpopen = types.KeyboardButton('ОТКРЫТЬ 🎇"ШИРП"🎇')
+        markup.add(shirpopen)
         markup.add(itemback)
         shirpjpg = open('static\shirp.jpg', 'rb')
         bot.send_photo(message.chat.id, shirpjpg)
-        bot.send_message(message.chat.id, "🌠Кейс создан для того чтобы у всех была возможность выбить кейсы дешевле чем в боте🌠", reply_markup=markup)
-        bot.send_message(message.chat.id, "Кейс 🎇'ШИРП'🎇:\nЦена: 15₽\n\n
+        bot.send_message(message.chat.id, "🌠Кейс создан для того чтобы у всех была возможность выбить 💎гемы💎 дешевле чем в боте🌠", reply_markup=markup)
+        bot.send_message(message.chat.id, "Кейс 🎇'ШИРП'🎇:\nЦена: 25₽\nВот что ты можешь выбить из него👇:\n🟡💎30 гемов💎\n🟢💎80 гемов💎\n🔵💎170 гемов💎\n🟡💎30 гемов💎\n🔵💎170 гемов💎\n🟢💎80 гемов💎\n🟡💎30 гемов💎")
+        ok_png = open('keys.webp', 'rb')
+        bot.send_sticker(message.chat.id, ok_png)
+    if message.text == 'ОТКРЫТЬ 🎇"ШИРП"🎇':
+        markup.add(itembuy)
+        markup.add(itemback)
+        bot.send_message(message.chat.id,"Ваша покупка:\n----------------------------------------\nКейс 🎇'ШИРП'🎇 за 25₽\n----------------------------------------\nВведите при оплате в поле комментария: "+ generator(10), reply_markup=markup)
+    if message.text == 'Кейс 👑"ROYAL"👑':
+        royalopen = types.KeyboardButton('ОТКРЫТЬ 👑"ROYAL"👑')
+        markup.add(royalopen)
+        markup.add(itemback)
+        shirpjpg = open('static\shirp.jpg', 'rb')
+        bot.send_photo(message.chat.id, shirpjpg)
+        bot.send_message(message.chat.id, "🌠С помощью этого кейса можно выбить ОГРОМНОЕ КОЛИЧЕСТВО 💎ГЕМОВ💎\n(В нём содержится ЭКСКЛЮЗИВНЫЕ 🎒2000 Гемов🎒 )🌠", reply_markup=markup)
+        bot.send_message(message.chat.id, "Кейс 👑'ROYAL'👑:\nЦена: 55₽\nВот что ты можешь выбить из него👇:\n🟩💎360 гемов💎\n🟥💎950 гемов💎\n🟪💎2000 гемов💎\n🟦💎170 гемов💎\n🟩💎360 гемов💎\n🟪💎2000 гемов💎\n🟥💎950 гемов💎\n🟨💎80 гемов💎")
+        oke_png = open('static\oke.webp', 'rb')
+        bot.send_sticker(message.chat.id, oke_png)
+    if message.text == 'ОТКРЫТЬ 👑"ROYAL"👑':
+        markup.add(itembuy)
+        markup.add(itemback)
+        bot.send_message(message.chat.id,"Ваша покупка:\n----------------------------------------\nКейс 👑'ROYAL'👑 за 55₽\n----------------------------------------\nВведите при оплате в поле комментария: "+ generator(8), reply_markup=markup)
+    if message.text == '🎒2000 Гемов🎒':
+        royalopen = types.KeyboardButton('ОТКРЫТЬ 👑"ROYAL"👑')
+        markup.add(royalopen)
+        markup.add(itemback)
+        #shirpjpg = open('static\royal.jpg', 'rb')
+        #bot.send_photo(message.chat.id, shirpjpg)
+        bot.send_message(message.chat.id, "🌠С помощью этого кейса можно выбить ОГРОМНОЕ КОЛИЧЕСТВО 💎ГЕМОВ💎\n(В нём содержится ЭКСКЛЮЗИВНЫЕ 🎒2000 Гемов🎒 )🌠", reply_markup=markup)
+        bot.send_message(message.chat.id, "Кейс 👑'ROYAL'👑:\nЦена: 55₽\nВот что ты можешь выбить из него👇:\n🟩💎360 гемов💎\n🟥💎950 гемов💎\n🟪💎2000 гемов💎\n🟦💎170 гемов💎\n🟩💎360 гемов💎\n🟪💎2000 гемов💎\n🟥💎950 гемов💎\n🟨💎80 гемов💎")
+        oke_png = open('static\oke.webp', 'rb')
+        bot.send_sticker(message.chat.id, oke_png)
+
+
+
+
+
+
+
 
 
 
